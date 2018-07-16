@@ -1,9 +1,9 @@
 task :default => [:dev]
 
 task :dev do
-  system("rerun ruby app.rb")
+  system("rerun rackup")
 end
 
 task :run do
-  system("ruby app.rb")
+  system("rackup")
 end
