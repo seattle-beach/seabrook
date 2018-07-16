@@ -3,7 +3,7 @@ require 'grape'
 class App < Grape::API
   format :json
 
-  resource :standups do
+  resource :meetings do
     get do
       {:data => [1, 2, 3]}
     end
