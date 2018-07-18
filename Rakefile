@@ -7,3 +7,7 @@ end
 task :run do
   system("rackup")
 end
+
+task :db do
+  system("mongod --dbpath db")
+end
