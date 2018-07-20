@@ -3,7 +3,7 @@ ruby '2.3.1'
 
 gem 'rake'
 gem 'grape'
-gem 'mongo_mapper'
+gem 'mongoid'
 
 group :development do
   gem 'rerun'

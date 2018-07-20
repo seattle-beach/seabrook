@@ -1,8 +1,7 @@
-require 'mongo_mapper'
+require 'mongoid'
 
 class Meeting
-  include MongoMapper::Document
-
-  key :date, Date
-  many :topics
+  include Mongoid::Document
+  field :date, type: Date
+  embeds_many :topics
 end

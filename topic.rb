@@ -1,8 +1,7 @@
-require 'mongo_mapper'
+require 'mongoid'
 
 class Topic
-  include MongoMapper::EmbeddedDocument
-
-  key :content, String
-  key :votes, Integer
+  include Mongoid::Document
+  field :content, type: String
+  field :votes, type: Integer
 end

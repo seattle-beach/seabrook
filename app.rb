@@ -1,11 +1,15 @@
 require 'grape'
 
+require_relative 'meeting'
+require_relative 'topic'
+
 class App < Grape::API
   format :json
 
   resource :meetings do
     get do
-      {:data => [1, 2, 3]}
+      Meeting.all
+      #{:data => [1, 2, 3]}
     end
 
     route_param :date, type: Date do
