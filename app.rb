@@ -13,11 +13,27 @@ class App < Grape::API
 
     route_param :date, type: Date do
       get do
-        "you seek '#{params[:date]}'"
+        Meeting.find(params[:date])
       end
 
       post do
-        "you entered '#{params[:date]}'"
+        Meeting.new(date: params[:date], title: params[:title]).upsert
+        return
+      end
+
+      resource :topics do
+        get do
+          Meeting.find(params[:date]).topics
+        end
+
+        post do
+          topic = Topic.new(content: params[:content])
+          Meeting.find(params[:date])
+            .topics
+            .push(topic)
+
+          topic
+        end
       end
     end
   end
