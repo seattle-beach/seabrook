@@ -9,7 +9,6 @@ class App < Grape::API
   resource :meetings do
     get do
       Meeting.all
-      #{:data => [1, 2, 3]}
     end
 
     route_param :date, type: Date do
