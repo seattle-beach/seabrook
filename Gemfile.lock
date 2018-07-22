@@ -73,6 +73,7 @@ PLATFORMS
 
 DEPENDENCIES
   grape
+  minitest
   mongoid
   pry
   rake

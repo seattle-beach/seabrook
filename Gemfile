@@ -8,4 +8,6 @@ gem 'mongoid'
 group :development do
   gem 'rerun'
   gem 'pry'
+
+  gem 'minitest'
 end
