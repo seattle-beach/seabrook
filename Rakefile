@@ -1,4 +1,5 @@
 require 'rake/testtask'
+require_relative 'app'
 
 task :default => [:dev]
 
@@ -16,4 +17,10 @@ end
 
 Rake::TestTask.new do |t|
   t.pattern = 'test/*_test.rb'
+end
+
+task :routes do
+  App.routes.each do |route|
+    puts "#{route.request_method.ljust(10)} #{route.path}"
+  end
 end
