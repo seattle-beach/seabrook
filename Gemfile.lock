@@ -52,6 +52,7 @@ GEM
     rack (2.0.5)
     rack-accept (0.4.5)
       rack (>= 0.4)
+    rack-cors (1.0.2)
     rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -76,6 +77,7 @@ DEPENDENCIES
   minitest
   mongoid
   pry
+  rack-cors
   rake
   rerun
 
