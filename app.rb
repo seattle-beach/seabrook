@@ -27,12 +27,11 @@ class App < Grape::API
         end
 
         post do
-          topic = Topic.new(content: params[:content])
-          Meeting.find(params[:date])
-            .topics
-            .push(topic)
+          meeting = Meeting.find(params[:date])
+          topic = Topic.new(content: params[:content], id: meeting.topics.count)
+          meeting.topics.push(topic)
 
-          topic
+          return
         end
       end
     end
