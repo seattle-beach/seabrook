@@ -33,6 +33,20 @@ class App < Grape::API
 
           return
         end
+
+        route_param :id, type: Integer do
+          get do
+            Meeting.find(params[:date]).topics[params[:id]]
+          end
+
+          post do
+            topic = Meeting.find(params[:date]).topics[params[:id]]
+            topic.votes += 1
+            topic.save
+
+            return
+          end
+        end
       end
     end
   end
