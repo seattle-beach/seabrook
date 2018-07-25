@@ -7,4 +7,8 @@ class Meeting
   embeds_many :topics
 
   field :_id, type: Date, default: ->{ date }
+
+  after_initialize do
+    self[:topics] ||= []
+  end
 end

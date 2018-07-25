@@ -10,6 +10,8 @@ Named after the beach town [Seabrook, WA](https://www.google.com/maps/place/Seab
 Future: Slack integration also
 
 ## Development
+Install MongoDB: https://docs.mongodb.com/manual/administration/install-community/
+
 ```
 bundle install
 rake --tasks

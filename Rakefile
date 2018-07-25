@@ -15,6 +15,7 @@ end
 
 desc "Run MongoDB server (synchronously)"
 task :db do
+  system("mkdir -p db")
   system("mongod --dbpath db")
 end
 
