@@ -17,7 +17,7 @@ bundle install
 rake --tasks
 ```
 
-Or, if you have `seabrook-web` cloned as a sibling of this directory, you can use foreman to run the db, API, and frontend:
+Or, if you have `seabrook-web` cloned as a sibling of this directory, you can use [foreman](https://github.com/ddollar/foreman) to run the db, API, and frontend:
 ```
 gem install foreman
 foreman start
