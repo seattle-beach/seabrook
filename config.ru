@@ -1,8 +1,8 @@
 require 'mongoid'
 require 'rack/cors'
 
-require_relative 'id_filter'
-require_relative 'app'
+require_relative 'app/id_filter'
+require_relative 'app/app'
 
 Mongoid.load!('mongoid.yml')
 

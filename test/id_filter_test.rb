@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'json'
 
-require_relative '../id_filter'
+require_relative '../app/id_filter'
 
 class IdFilterTest < Minitest::Test
   class MockApp

@@ -1,5 +1,5 @@
 require 'rake/testtask'
-require_relative 'app'
+require_relative 'app/app'
 
 task :default => [:dev]
 
