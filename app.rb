@@ -17,8 +17,10 @@ class App < Grape::API
       end
 
       post do
-        Meeting.new(date: params[:date], title: params[:title]).upsert
-        return
+        meeting = Meeting.new(date: params[:date], title: params[:title])
+        meeting.upsert
+
+        meeting
       end
 
       resource :topics do
@@ -31,7 +33,7 @@ class App < Grape::API
           topic = Topic.new(content: params[:content], id: meeting.topics.count)
           meeting.topics.push(topic)
 
-          return
+          meeting
         end
 
         route_param :id, type: Integer do
@@ -40,11 +42,12 @@ class App < Grape::API
           end
 
           post do
-            topic = Meeting.find(params[:date]).topics[params[:id]]
+            meeting = Meeting.find(params[:date])
+            topic = meeting.topics[params[:id]]
             topic.votes += 1
             topic.save
 
-            return
+            meeting
           end
         end
       end
