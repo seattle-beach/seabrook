@@ -24,3 +24,8 @@ Or, if you have `seabrook-web` cloned as a sibling of this directory, you can us
 gem install foreman
 foreman start
 ```
+
+## Deployment
+See PCF `manifest.yml`. Assumes a MongoDB service has been created with name "mongodb".
+
+Note also `.travis.yml`
