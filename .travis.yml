@@ -8,7 +8,7 @@ deploy:
   password:
     secure: B/9+EHTItw74wjwAiBqVwGfqFs82JDHHh1IZbsrQFRelQuFZLN7RWVV/cMCDCPnwXzkMNz2shp5MXkjPMrHQH6HM+Zw7KJOjXd3uRN/MTs3GVGNkTkWOHp2SdcSMTwpwhvHWToxy4qR0qBbpuovDLJPr0BaLPAKglDEQWy3vrft+5xL32NmGlqLlIW2KLimVWqTFchXxbVNTQvfdASAfpf+kWb4Z5WMzYGt8PkAdB1fRnYlrYjsMX7QfPnpDeWUwAcPa4rRfuvZZTATUSSMleHLpzuvvZPqMirdriBzQPTAnIFT2ijBMq5klWkzZ85tdYsdNAu1SzG0dy2WdsJAIT78LQdOpUNzhRvgmlLIVo8PZ3qTNT+KbPJ/ltBaaPFx0XiG0lRU8ZCuL9vLvQkLVwI/rQu9fmhhu7PGbrdeC2QYLWwFJ5JBbiZBR9Fl2PRyf4Z/18CveT92u88lacPTJTl3wnzNt9w/hkI4kiAU6jNCLFrnhKNZN03zgEnJ1xFyWAI1dgH0eIPqc2qTAIzO8NM0ZgNWaaMh+HZqGlV1TWqEDaBdVI9+0rduRfeQxzXbbySikLWJkk2EFOhsR3cctOpAy3DdzIiys55TMrTA62PZ48HqxJY8Vqwl4l+5VK+xy4VY56R19D5al7Qn1ZhQjWHqPwPbtNpkvMzhy9pyc+Dc=
   organization: seattle-beach
-  space: book club
+  space: book-club
   on:
     repo: seattle-beach/seabrook
     branch: master
