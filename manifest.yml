@@ -1,0 +1,6 @@
+applications:
+- name: seabrook-api
+  memory: 256M
+  command: bundle exec rake run
+  services:
+  - mongodb

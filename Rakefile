@@ -1,4 +1,5 @@
 require 'rake/testtask'
+require 'json'
 require_relative 'app/app'
 
 task :default => [:dev]
@@ -10,7 +11,9 @@ end
 
 desc "Run the app (synchronously)"
 task :run do
-  system("rackup")
+  vcap_services = JSON.parse ENV['VCAP_SERVICES']
+  mongodb_uri = vcap_services['mlab'].first['credentials']['uri']
+  system("MONGODB_URI=#{mongodb_uri} rackup -p #{ENV['PORT']}")
 end
 
 desc "Run MongoDB server (synchronously)"
