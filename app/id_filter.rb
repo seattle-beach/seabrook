@@ -7,7 +7,9 @@ class IdFilter
 
   def call(env)
     status, headers, response = @app.call(env)
-    if headers['Content-Type'].include?('application/json') and response.body.first != 'null'
+    if !headers['Content-Type'].nil? and
+      headers['Content-Type'].include?('application/json') and
+      response.body.first != 'null' then
       body = JSON.parse(response.body.first)
       traverse!(body)
       filtered = body.to_json
