@@ -13,7 +13,7 @@ class IdFilter
       body = JSON.parse(response.body.first)
       traverse!(body)
       filtered = body.to_json
-      headers['Content-Length'] = filtered.length.to_s
+      headers['Content-Length'] = filtered.bytesize.to_s
       response = [filtered]
     end
 
