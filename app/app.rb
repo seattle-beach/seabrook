@@ -49,6 +49,15 @@ class App < Grape::API
 
             meeting
           end
+
+          put do
+            meeting = Meeting.find(params[:date])
+            topic = meeting.topics[params[:id]]
+            topic.content = params[:content]
+            topic.save
+
+            meeting
+          end
         end
       end
     end
