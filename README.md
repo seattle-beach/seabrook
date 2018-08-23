@@ -29,3 +29,6 @@ foreman start
 See PCF `manifest.yml`. Assumes a MongoDB service has been created with name "mongodb".
 
 Note also `.travis.yml`
+
+## Miscellaneous thoughts
+Might be interesting to try pure functional on the backend as well - Elixir/Phoenix?
