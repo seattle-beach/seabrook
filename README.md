@@ -30,5 +30,18 @@ See PCF `manifest.yml`. Assumes a MongoDB service has been created with name "mo
 
 Note also `.travis.yml`
 
+## MongoDB cheatsheet
+Connect to the instance:
+`mongo mongodb://....`
+
+In the Mongo shell:
+```
+meetings = db.meetings
+meetings.updateOne(
+  { date: ISODate("2018-08-28") },
+  { $set: { "topics": [] } }
+)
+```
+
 ## Miscellaneous thoughts
 Might be interesting to try pure functional on the backend as well - Elixir/Phoenix?
